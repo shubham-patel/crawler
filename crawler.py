@@ -10,9 +10,10 @@ def request(url):
         pass
 
 
-url = "testphp.vulnweb.com"   # use metasploitable mutillidae for testing
+url = raw_input("Enter URL ")   
+path = raw_input("Enter path of the wordlist: ")
 
-with open("/home/shubham/Downloads/common.txt", "r") as wordlist_file:
+with open(path, "r") as wordlist_file:
     for line in wordlist_file:
         word = line.strip()
         test_url = url + "/" + word
